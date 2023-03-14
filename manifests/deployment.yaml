@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+    spec:
+      containers:
+      - name: app
+        image: jemesson/express-app
+        ports:
+        - containerPort: 3000
+        resources:
+            requests: 
+              cpu: 10m
+              memory: 64Mi
+            limits:
+              cpu: 80m
+              memory: 128Mi          
+
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 3000
+          periodSeconds: 3
+          failureThreshold: 1
+          initialDelaySeconds: 10
+
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 3000
+          periodSeconds: 5
+          failureThreshold: 1
+          timeoutSeconds: 1
+          successThreshold: 1
+          initialDelaySeconds: 15
