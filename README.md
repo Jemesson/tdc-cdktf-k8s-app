@@ -61,7 +61,7 @@ npm run prod
 ## Stack
 * [Terraform Cloud](https://app.terraform.io/)
 * [Terraform CDK](https://developer.hashicorp.com/terraform/cdktf)
-* [TypeScript](typescriptlang.org)
+* [TypeScript](https://www.typescriptlang.org/)
 * [AWS](https://aws.amazon.com/)
 
 ## References
