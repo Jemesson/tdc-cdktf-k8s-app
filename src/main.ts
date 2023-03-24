@@ -13,6 +13,7 @@ class MyStack extends TerraformStack {
   constructor(scope: Construct, id: string, config: StackConfig) {
     super(scope, id);
 
+    // Input vars
     const cidr = new TerraformVariable(this, "cidr", {
       type: "string",
       default: "10.0.0.0/16"
