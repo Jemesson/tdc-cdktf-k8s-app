@@ -22,7 +22,7 @@ npm install
 And then, get the providers and modules used in the project running:
 
 ```bash
-npm get
+npm run get
 ```
 
 Terraform Cloud
