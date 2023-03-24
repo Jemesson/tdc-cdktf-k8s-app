@@ -27,7 +27,7 @@ npm get
 
 Terraform Cloud
 
-Create an account in Terraform cloud, with an organization, with the given workspace: `tdc-cdktf-k8s-app`.
+> Create an account in Terraform cloud, with an organization, with the given workspace: `tdc-cdktf-k8s-app`.
 
 Create environment variables:
 
@@ -43,17 +43,17 @@ Generate Terraform JSON config. Creates an auto-generated directory `cdktf.out`
 npm run synth
 ```
 
-To deploy in Dev:
+Deploy in Dev:
 ```bash
 npm run dev
 ```
 
-To deploy in Staging:
+Deploy in Staging:
 ```bash
 npm run staging
 ```
 
-To deploy in Production:
+Deploy in Production:
 ```bash
 npm run prod
 ```
