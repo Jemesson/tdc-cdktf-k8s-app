@@ -26,7 +26,7 @@
     "@cdktf/provider-aws": "11.0.10",
     "@cdktf/provider-kubernetes": "4.0.2",
     "cdktf": "^0.14.3",
-    "constructs": "^10.1.276"
+    "constructs": "^10.2.45"
   },
   "devDependencies": {
     "@types/jest": "^29.4.1",
