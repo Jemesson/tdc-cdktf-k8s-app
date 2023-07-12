@@ -45,9 +45,11 @@ class MyStack extends TerraformStack {
 // main
 
 const app = new App();
-const devStack = new MyStack(app, "tdc-dev-stack", { environment: "dev", region: "us-east-1"});
-const stagingStack = new MyStack(app, "tdc-staging-stack", { environment: "staging", region: "us-east-1"});
-const productionStack = new MyStack(app, "tdc-production-stack", { environment: "production", region: "us-east-2"});
+const [devStack, stagingStack, productionStack] = [
+  new MyStack(app, "tdc-dev-stack", { environment: "dev", region: "us-east-1"}),
+  new MyStack(app, "tdc-hml-stack", { environment: "hml", region: "us-east-1"}),
+  new MyStack(app, "tdc-prod-stack", { environment: "prod", region: "us-east-2"}),
+];
 
 getTerraformCloud(devStack);
 getTerraformCloud(stagingStack);

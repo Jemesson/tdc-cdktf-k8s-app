@@ -34,11 +34,11 @@ export const getAwsVpc = (scope: Construct, id: string, project: string, cidr: s
 }
 
 const getAzs = () => {
-    const azsMap = new Map();
+    const azs = new Map();
 
     // Map other azs by region key
-    azsMap.set("us-east-1", ["us-east-1a", "us-east-1b", "us-east-1c"]);
-    azsMap.set("us-east-2", ["us-east-2a", "us-east-2b", "us-east-2c"]);
+    azs.set("us-east-1", ["us-east-1a", "us-east-1b", "us-east-1c"]);
+    azs.set("us-east-2", ["us-east-2a", "us-east-2b", "us-east-2c"]);
 
-    return azsMap;
+    return azs;
 }
